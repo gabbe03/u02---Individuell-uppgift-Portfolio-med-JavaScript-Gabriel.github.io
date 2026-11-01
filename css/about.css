@@ -85,6 +85,9 @@
   display: none;
 }
 @media (min-width: 800px) {
+  .main-header {
+    position: sticky;
+  }
   .about-title {
     color: var(--main-text-heading);
   }
