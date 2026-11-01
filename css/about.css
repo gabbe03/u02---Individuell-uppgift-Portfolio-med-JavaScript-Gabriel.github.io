@@ -1,3 +1,6 @@
+.main-header {
+  position: fixed;
+}
 .about-title {
   color: var(--mobile-color);
   font-family: "Poppins", sans-serif;
@@ -15,7 +18,7 @@
   width: 100%;
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 2rem 2rem;
+  padding: 15rem 2rem 2rem;
   font-family: "Poppins", sans-serif;
 }
 .about-content > * {
