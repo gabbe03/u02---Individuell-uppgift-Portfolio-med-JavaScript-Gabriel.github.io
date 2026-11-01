@@ -108,10 +108,14 @@ function showError(status, error) {
     error instanceof TypeError
       ? "Could not reach GitHub. Check your internet connection and try again."
       : error.message;
-
   status.innerHTML = `
-    <p class="status-error" role="alert">Could not load project. ${escapeHTML(text)}</p>
+    <p class="status-error" role="alert">${escapeHTML(text)}</p>
+    <button type="button" id="retry-button" class="retry-button">Try again</button>
   `;
+
+  document
+    .getElementById("retry-button")
+    .addEventListener("click", loadProjects);
 }
 
 function escapeHTML(text) {

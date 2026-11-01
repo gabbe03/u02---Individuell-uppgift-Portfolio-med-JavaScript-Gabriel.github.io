@@ -19,12 +19,7 @@ function renderList(containerId, items) {
   container.innerHTML = items.map(createJobHTML).join("");
 }
 function createJobHTML(item) {
-  const locationHTML = item.location
-    ? `<span>
-         <img class="location-icon" alt="" src="../img/location-icon.svg" />
-         ${item.location}
-       </span>`
-    : "";
+  const locationHTML = item.location;
 
   return `
     <article class="job">
@@ -38,7 +33,10 @@ function createJobHTML(item) {
             <img class="location-icon" alt="" src="../img/office-building-icon.svg" />
             ${item.organization}
           </span>
-          ${locationHTML}
+          <span>
+         <img class="location-icon" alt="" src="../img/location-icon.svg" />
+         ${item.location}
+       </span>
         </div>
         <span class="job-date">
           <img class="date-icon" alt="" src="../img/calender-icon.png" />
