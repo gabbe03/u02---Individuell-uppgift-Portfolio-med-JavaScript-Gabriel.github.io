@@ -27,22 +27,7 @@
       "title": "Bachelor in Electronics Communication",
       "type": "Full Time",
       "organization": "Your College Name here",
-      "location": "",
       "date": "Aug 2015 - Dec 2020"
-    },
-    {
-      "title": "Pre-University Course (Science)",
-      "type": "Full Time",
-      "organization": "Your Pre-University College here",
-      "location": "Bengaluru",
-      "date": "Jun 2013 - May 2015"
-    },
-    {
-      "title": "Frontend Development Bootcamp",
-      "type": "Part Time",
-      "organization": "Your Bootcamp name here",
-      "location": "Online",
-      "date": "Jan 2021 - Aug 2021"
     }
   ]
 }
