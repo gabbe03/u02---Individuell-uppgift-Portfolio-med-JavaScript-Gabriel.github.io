@@ -30,6 +30,7 @@ html {
 
   /* Projects page colors */
   --card-shadow: #00000033;
+  --error-color: #c70000;
 
   /* Contact page colors */
   --contact-title: #1e0e62;

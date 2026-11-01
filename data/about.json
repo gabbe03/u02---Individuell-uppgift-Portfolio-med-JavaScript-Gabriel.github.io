@@ -4,21 +4,21 @@
       "title": "Junior Web Developer",
       "type": "Full Time",
       "organization": "Dr. Rajkumar's Learning App",
-      "location": "Bengaluru",
+      "location": "New York",
       "date": "Sep 2021 - Dec 2021"
     },
     {
       "title": "Web Development Intern",
       "type": "Internship",
-      "organization": "Company Name here",
-      "location": "Bengaluru",
+      "organization": "HOOPS",
+      "location": "Märsta",
       "date": "Sep 2021 - Dec 2021"
     },
     {
       "title": "SEO / SEM Specialist",
       "type": "Internship",
       "organization": "HAAPS",
-      "location": "Bengaluru",
+      "location": "Uppsala",
       "date": "Sep 2021 - Dec 2021"
     }
   ],
@@ -27,7 +27,22 @@
       "title": "Bachelor in Electronics Communication",
       "type": "Full Time",
       "organization": "Your College Name here",
+      "location": "Stockholm",
       "date": "Aug 2015 - Dec 2020"
+    },
+    {
+      "title": "Master of Science in Software Engineering",
+      "type": "Full Time",
+      "organization": "KTH Royal Institute of Technology",
+      "location": "Stockholm",
+      "date": "Aug 2021 - Jun 2023"
+    },
+    {
+      "title": "JavaScript Certification",
+      "type": "Self-paced",
+      "organization": "Chas Academy",
+      "location": "Stockholm",
+      "date": "Mar 2026 - Sep 2028"
     }
   ]
 }
