@@ -6,7 +6,7 @@ Innan något visas gör koden fyra saker. Först kontrollerar den statuskoden, e
 
 Två datakällor: about.json har jag själv skrivit så jag kan ändra direkt vad som ska visas och den ligger på samma server som sidan så den har ingen begräns för antal anrop.
 
-GitHubs API kan jag inte ändra lika lätt och jag har ingen kontroll om API ligger nere eller hur många anrop jag kan göra. Det är varför jag har fallback kod som (const description = repo.description || "No description yet.";) och (const stack = extra.stack || repo.language || "Not specified";)
+GitHubs API kan jag inte ändra lika lätt och jag har ingen kontroll om API ligger nere eller hur många anrop jag kan göra. Det är varför jag har fallback kod som (const image = extra.image || DEFAULT_IMAGE;), (const description = repo.description || "No description yet.";) och (const stack = repo.language || "Not specified";).
 
 DOM och händelser: Jag bygger om sidan genom att bygga HTML som text med template strings och sätta in den i de tomma behållarna #work-list, #education-list och #project-status, #project-grid. Det är enkelt och läsbart men innerHTML byter ut hela innehållet på en gång.
 
@@ -22,7 +22,7 @@ Hade jag satt färgerna i JavaScript hade jag behövt lyssna på matchMedia("(pr
 
 När det inte går som tänkt: Om API:n är långsam med att ladda vissas en loading spinner med texten "Loading projects…" under spinnern. Jag testade det med slow 3g i Chrome dev tools.
 
-fetchRepos() kastar olika fel för 403/429 (för många anrop), 404 (användaren finns inte) och övriga felkoder. showError() visar meddelandet på sidan. Om internet är nere kastar fetch ett TypeError med ett kryptiskt meddelande så då visar jag ett eget: “Could not reach GitHub…”. Om listan är tom eller tom efter att forks filtrerats bort visar sidan “No public repositories found.” och inte en tom yta.
+fetchRepos() kastar olika fel för 403/429 (för många anrop), 404 (användaren finns inte) och övriga felkoder. showError() visar meddelandet på sidan. Om internet är nere kastar fetch ett TypeError med ett kryptiskt meddelande så då visar jag ett eget: "Could not reach GitHub. Check your internet connection and try again.". Om API:et tar för lång tid att hämta projekten så står det "GitHub took too long to answer. Please try again." med en knapp för att testa om.
 
 Styrkor och brister: Det som blev bra är att datahämtning, felhantering och HTML-byggande ligger i separata funktioner så att jag kan hitta och ändra varje del. Sidan fungerar även när min egen JSON saknas och felen syns för besökaren.
 

@@ -32,7 +32,9 @@ async function loadProjects() {
 }
 
 async function fetchRepos() {
-  const response = await fetch(API_URL);
+  const response = await fetch(API_URL, {
+    signal: AbortSignal.timeout(10000),
+  });
 
   if (response.status === 403 || response.status === 429) {
     throw new Error(
@@ -60,10 +62,10 @@ async function fetchExtras() {
 }
 
 function createCardHTML(repo, extra = {}) {
-  const image = extra.image || DEFAULT_IMAGE;
+  const image = extra?.image || DEFAULT_IMAGE;
   const description = repo.description || "No description yet.";
-  const stack = extra.stack || repo.language || "Not specified";
-  const liveUrl = extra.live || repo.homepage;
+  const stack = repo.language || "Not specified";
+  const liveUrl = repo.homepage;
 
   const liveLink = liveUrl
     ? `<a class="project-link" href="${escapeHTML(liveUrl)}" target="_blank" rel="noopener">
@@ -104,10 +106,16 @@ function showMessage(status, text) {
 }
 
 function showError(status, error) {
-  const text =
-    error instanceof TypeError
-      ? "Could not reach GitHub. Check your internet connection and try again."
-      : error.message;
+  let text;
+  if (error.name === "TimeoutError") {
+    text = "GitHub took too long to answer. Please try again.";
+  } else if (error instanceof TypeError) {
+    text =
+      "Could not reach GitHub. Check your internet connection and try again.";
+  } else {
+    text = error.message;
+  }
+
   status.innerHTML = `
     <p class="status-error" role="alert">${escapeHTML(text)}</p>
     <button type="button" id="retry-button" class="retry-button">Try again</button>
