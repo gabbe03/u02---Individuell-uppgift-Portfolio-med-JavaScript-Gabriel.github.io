@@ -17,8 +17,8 @@
   .location-icon,
   .location-icon-date,
   .project-link-icon,
-  .stack-grid img:nth-child(10),
-  .stack-grid img:nth-child(12) {
+  .techstack-grid img:nth-child(10),
+  .techstack-grid img:nth-child(12) {
     filter: invert(1) brightness(3);
   }
   .nav-pics {
