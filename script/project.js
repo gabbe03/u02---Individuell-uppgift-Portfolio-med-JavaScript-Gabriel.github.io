@@ -1,6 +1,6 @@
 const USERNAME = "gabbe03";
 const API_URL = `https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=30`;
-const DEFAULT_IMAGE = "../img/project-1.png";
+const DEFAULT_IMAGE = "../img/project-1.webp";
 
 loadProjects();
 
