@@ -150,6 +150,7 @@
   .project-content {
     padding: 3rem var(--page-padding-x) 8rem;
     max-width: 122.3rem;
+    min-height: 100vh;
   }
   .project-title {
     padding-top: 6rem;
