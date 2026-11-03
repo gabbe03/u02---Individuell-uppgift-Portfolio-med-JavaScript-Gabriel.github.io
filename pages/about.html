@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/about.css" />
     <link rel="stylesheet" href="../css/dark.css" />
-    <script src="../script/about.js"></script>
+    <script src="../script/about.js" defer></script>
 
     <title>About me</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="hide-footer-dark">
+  <body>
     <header class="main-header">
       <a class="head-text" href="../index.html">
         <span class="logo-mark">{007}</span>
@@ -42,7 +42,7 @@
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="18" x2="21" y2="18" />
             </svg>
-            <span class="menu-hidden"></span>
+            <span class="menu-hidden">Menu</span>
           </summary>
           <ul class="mobile-nav">
             <li><a class="nav-links" href="../index.html">Home</a></li>
@@ -71,24 +71,15 @@
           <li><a class="nav-links" href="../pages/contact.html">Contact</a></li>
         </ul>
       </nav>
-      <nav class="nav-pictures">
+      <nav class="nav-pictures" aria-label="Social media">
         <a href="#"
-          ><img
-            class="nav-pics"
-            alt="Link to my twitter"
-            src="../img/twitter-icon.svg"
+          ><img class="nav-pics" alt="Twitter" src="../img/twitter-icon.svg"
         /></a>
         <a href="#"
-          ><img
-            class="nav-pics"
-            alt="Link to my linkedin"
-            src="../img/linkedin-icon.svg"
+          ><img class="nav-pics" alt="Linkedin" src="../img/linkedin-icon.svg"
         /></a>
         <a href="#"
-          ><img
-            class="nav-pics"
-            alt="Link to my github"
-            src="../img/github-icon.svg"
+          ><img class="nav-pics" alt="GitHub" src="../img/github-icon.svg"
         /></a>
       </nav>
     </header>

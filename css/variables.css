@@ -15,9 +15,10 @@ html {
   /* Universal colors */
   --main-text-heading: #42446e;
   --dark-content: #666666;
-  --light-content: #a7a7a7;
+  --light-content: #666666;
   --mobile-color: #000;
   --fixed-background: #fff;
+  --error-color: #c70000;
 
   /* Home page colors */
   --main-text-gradient: linear-gradient(90deg, #13b0f5 -50%, #ca24b4 180%);
@@ -30,7 +31,6 @@ html {
 
   /* Projects page colors */
   --card-shadow: #00000033;
-  --error-color: #c70000;
 
   /* Contact page colors */
   --contact-title: #1e0e62;

@@ -5,7 +5,7 @@
   color: var(--mobile-color);
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: clamp(0.5rem, 4.2rem, 3rem);
+  font-size: 3rem;
   line-height: 5.2rem;
   letter-spacing: -0.04rem;
   margin: 2rem 0 1rem;
@@ -83,6 +83,9 @@
 }
 .date-icon {
   display: none;
+}
+.status-error {
+  color: var(--error-color);
 }
 @media (min-width: 800px) {
   .main-header {

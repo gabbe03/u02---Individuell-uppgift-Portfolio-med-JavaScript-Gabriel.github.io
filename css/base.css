@@ -128,7 +128,6 @@ main {
   letter-spacing: 0rem;
   font-family: "Poppins", sans-serif;
   color: var(--dark-content);
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;

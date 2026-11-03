@@ -36,12 +36,9 @@
   font-weight: 400;
   color: var(--dark-content);
 }
-.footer {
-  padding-right: 8rem;
-}
 @media (min-width: 800px) {
   .contact-content {
-    padding: 10rem var(--page-padding-x) 12rem; /* header is static on desktop */
+    padding: 10rem var(--page-padding-x) 12rem;
   }
   .contact-mail {
     font-size: 5.8rem;

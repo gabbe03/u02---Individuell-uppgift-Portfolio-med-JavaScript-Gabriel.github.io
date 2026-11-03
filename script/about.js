@@ -3,14 +3,23 @@ document.addEventListener("DOMContentLoaded", loadAboutData);
 async function loadAboutData() {
   try {
     const response = await fetch("../data/about.json");
+    if (!response.ok) {
+      throw new Error(`about.json answered with status ${response.status}`);
+    }
 
     const data = await response.json();
-
     renderList("work-list", data.work);
     renderList("education-list", data.education);
   } catch (error) {
     console.error("Could not load about.json:", error);
+    showAboutError();
   }
+}
+
+function showAboutError() {
+  const message = `<p class="status-error" role="alert">Could not load this information. Please try again later.</p>`;
+  document.getElementById("work-list").innerHTML = message;
+  document.getElementById("education-list").innerHTML = message;
 }
 
 function renderList(containerId, items) {
@@ -18,6 +27,7 @@ function renderList(containerId, items) {
 
   container.innerHTML = items.map(createJobHTML).join("");
 }
+
 function createJobHTML(item) {
   const locationHTML = item.location;
 

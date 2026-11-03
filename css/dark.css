@@ -17,16 +17,17 @@
   .location-icon,
   .location-icon-date,
   .project-link-icon,
-  .techstack-grid img:nth-child(10),
-  .techstack-grid img:nth-child(12) {
+  .techstack-grid li:nth-child(10) img,
+  .techstack-grid li:nth-child(12) img {
     filter: invert(1) brightness(3);
   }
+
   .nav-pics {
     filter: brightness(1.5);
   }
 }
 @media (prefers-color-scheme: dark) and (max-width: 800px) {
   .home-page .main-header .nav-pics {
-    filter: brightness(10);
+    filter: invert(1) brightness(10);
   }
 }

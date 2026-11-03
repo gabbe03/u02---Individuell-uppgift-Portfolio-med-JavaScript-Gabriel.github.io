@@ -77,7 +77,7 @@ function createCardHTML(repo, extra = {}) {
     <article class="project-card">
       <img class="project-img" src="${escapeHTML(image)}" alt="Preview of ${escapeHTML(repo.name)}" />
       <div class="project-body">
-        <h3 class="project-name">${escapeHTML(repo.name)}</h3>
+        <h2 class="project-name">${escapeHTML(repo.name)}</h2>
         <p class="project-desc">${escapeHTML(description)}</p>
         <p class="project-stack">
           <span class="project-stack-label">Tech stack :</span>

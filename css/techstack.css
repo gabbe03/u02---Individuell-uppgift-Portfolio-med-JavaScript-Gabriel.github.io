@@ -10,7 +10,6 @@
 .techstack-title {
   font-weight: 700;
   font-size: 2.8rem;
-  font-style: bold;
   line-height: 1.24;
   letter-spacing: 0;
   color: var(--mobile-color);
@@ -39,8 +38,12 @@
   height: 7rem;
   object-fit: contain;
 }
+.techstack-grid {
+  list-style: none;
+}
 
-.techstack-pics:last-child {
+.techstack-grid li:nth-child(10) img,
+.techstack-grid li:nth-child(12) img {
   filter: brightness(0);
 }
 @media (min-width: 800px) {
